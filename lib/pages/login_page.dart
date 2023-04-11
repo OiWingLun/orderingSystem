@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orderingsystem/pages/home_page.dart';
+import 'home_page.dart';
 
 class LoginPage extends StatefulWidget {
    const LoginPage({super.key});
@@ -82,6 +82,31 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: InputDecoration(
                       hintText: 'Password',
                       border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+              ),
+              GestureDetector(
+                onTap: () => Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return HomePage();
+                    },
+                  ),
+                ),
+                child: Container(
+                  padding: const EdgeInsets.all(24),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: const Color.fromARGB(255, 112, 91, 222),
+                  ),
+                  child: const Text(
+                    "Sign In",
+                    style: TextStyle(
+                      color: Colors.white,
+                      // fontWeight: FontWeight.bold,
+                      fontSize: 16,
                     ),
                   ),
                 ),
