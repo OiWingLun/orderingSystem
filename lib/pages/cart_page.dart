@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'home_page.dart';
 import '../model/cart_model.dart';
 
 class CartPage extends StatelessWidget {
@@ -80,7 +81,7 @@ class CartPage extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    color: Colors.green,
+                    color: Colors.blueGrey,
                   ),
                   padding: const EdgeInsets.all(24),
                   child: Row(
@@ -91,7 +92,7 @@ class CartPage extends StatelessWidget {
                         children: [
                           Text(
                             'Total Price',
-                            style: TextStyle(color: Colors.green[200]),
+                            style: TextStyle(color: Colors.blueGrey[200]),
                           ),
 
                           const SizedBox(height: 8),
@@ -108,24 +109,34 @@ class CartPage extends StatelessWidget {
                       ),
 
                       // pay now
-                      Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.green.shade200),
-                          borderRadius: BorderRadius.circular(28),
-                        ),
-                        padding: const EdgeInsets.all(12),
-                        child: Row(
-                          children: const [
-                            Text(
-                              'Pay Now',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Icon(
-                              Icons.arrow_forward_ios,
-                              size: 16,
-                              color: Colors.white,
-                            ),
-                          ],
+                  GestureDetector(
+                    onTap: () => Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return HomePage();
+                        },
+                      ),
+                    ),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.blueGrey.shade200),
+                            borderRadius: BorderRadius.circular(28),
+                          ),
+                          padding: const EdgeInsets.all(12),
+                          child: Row(
+                            children: const [
+                              Text(
+                                'Pay Now',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              Icon(
+                                Icons.arrow_forward_ios,
+                                size: 16,
+                                color: Colors.white,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
