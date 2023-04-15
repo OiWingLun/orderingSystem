@@ -4,29 +4,53 @@ import 'package:orderingsystem/model/bread.dart';
 class BreadShop extends ChangeNotifier{
   // bread for sale list
   final List<Bread> _shop = [
-    //bread 1
+    // Baguette
     Bread(
-      name: 'bread 1',
-      price: '0.00',
-      imagepath: "",
+      name: 'Baguette',
+      price: 'RM7.20',
+      imagepath: "lib/icons/Baguette.jpg",
     ),
-    //bread 2
+    // Brioche
     Bread(
-      name: 'bread 2',
-      price: '0.00',
-      imagepath:"" ,
+      name: 'Brioche',
+      price: 'RM12.90',
+      imagepath:"lib/icons/Brioche.png" ,
     ),
-    //bread 3
+    // Challah
     Bread(
-      name: 'bread 3',
-      price: '0.00',
-      imagepath: "",
+      name: 'Challah',
+      price: 'RM7.50',
+      imagepath: "lib/icons/Challah.jpg",
     ),
-    //bread 4
+    // Ciabatta
     Bread(
-      name: 'bread 1',
-      price: '0.00',
-      imagepath: "",
+      name: 'Ciabatta',
+      price: 'RM15.00',
+      imagepath: "lib/icons/Ciabatta.jpg",
+    ),
+    // Flatbread
+    Bread(
+      name: 'Flatbread',
+      price: 'RM6.30',
+      imagepath: "lib/icons/Flatbread.jpg",
+    ),
+    // Focaccia
+    Bread(
+      name: 'Focaccia',
+      price: 'RM20.00',
+      imagepath: "lib/icons/Focaccia.jpg",
+    ),
+    // Soda bread
+    Bread(
+      name: 'Soda bread',
+      price: 'RM23.90',
+      imagepath: "lib/icons/Soda bread.png",
+    ),
+    // Sourdough
+    Bread(
+      name: 'Sourdough',
+      price: 'RM22.00',
+      imagepath: "lib/icons/Sourdough.jpg",
     ),
   ];
   // user cart
